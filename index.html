@@ -9,6 +9,8 @@
 </head>
 <body>
     <div id="main-container">
+        <div id="left-half" class="half-part"></div>
+        <div id="right-half" class="half-part"></div>
     <section id="container1" class="container">
         <div id="cube1" class="cube">
             <div class="front">
@@ -46,6 +48,7 @@
             </div>
         </div>
         <button class="roll_dice" value="cube1" onclick="roll_the_dice(this.value)">Roll</button>
+        <div class="score-board scorecard1">Player1</div>
     </section>
     <section id="container2" class="container">
         <div id="cube2" class="cube">
@@ -84,6 +87,7 @@
             </div>
         </div>
         <button class="roll_dice" value="cube2" onclick="roll_the_dice(this.value)">Roll</button>
+        <div class="score-board scorecard2">Player2</div>
     </section>
     </div>
     <script src="jquery-3.6.0.js"></script>

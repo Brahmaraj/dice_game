@@ -4,6 +4,7 @@
 }
 body{
     background: url(wp2727708-black-and-green-wallpaper.jpg);
+    filter: opacity(100px);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -63,7 +64,7 @@ body{
     border-radius: 50%;
     display: block;
     position: absolute;
-    background: rgba(54, 236, 63,0.8);
+    background: rgba(54, 236, 63,1);
 }
 
 .front .dot1{top: 85px; left: 85px;}
@@ -89,24 +90,27 @@ body{
 .bottom .dot5{top: 125px; left: 125px;}
 
 #container1{
-    top: 50px;
-    left: -50px;
+    position: absolute;
+    left:-5vw;
 }
 #container2{
-    top: -250px;
-    left: 600px;
+    position: absolute;
+    left: 35vw;
 }
 .roll_dice{
-    text-decoration: n;
+    text-decoration: none;
     position: absolute;
     top: 300px;
-    left: 50px;
-    width: 100px;
-    height: 30px;
+    left: 30px;
+    width: 150px;
+    height: 50px;
     background-color: rgba(54, 236, 63,0.5);
     border:1px solid hsla(0, 4%, 23%, 0.8);
+    font-size: 20px;
 }
-
+.roll_dice:hover{
+    box-shadow: inset 0px 0px 15px 12px rgba(54, 236, 63,0.5);
+}
 #main-container{
     position: absolute;
     width: 80vw;
@@ -114,4 +118,79 @@ body{
     top: 10%;
     left: 10%;
     background-color: hsla(0, 4%, 23%, 0.8);
+    background: url(1188236.jpg);
+    opacity: 0.9;
+    background-size: cover;
+}
+.half-part{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+}
+#left-half{
+    /* background-color: rgba(54, 236, 63,0.1); */
+}
+#right-half{
+    left: 50%;
+    background-color: rgba(54, 236, 63,0.1);
+}
+.score-board{
+    display: grid;
+    position: relative;
+    width: 100%;
+    height: 20%;
+    top: -60%;
+    text-align: center;
+    align-items: center;
+    background-color: hsla(0, 4%, 23%, 0.4);
+    color: rgba(54, 236, 63);
+}
+
+@media only screen and (max-width: 1000px) {
+  #container1{
+    position: relative;
+}
+#container2{
+    position: relative;
+    top: 25%;
+    left: -5%;
+}
+#main-container{
+    position: absolute;
+    width: 98vw;
+    height: 150%;
+    top: 0%;
+    left: 0%;
+    background-color: hsla(0, 4%, 23%, 0.8);
+    background: url(1188236.jpg);
+    opacity: 0.9;
+    background-size: 100% 100%;
+}
+.container{
+    position: relative;
+    margin: 150px 0 0 35vw;
+    width: 200px;
+    top: 50px;
+    height: 200px;
+    perspective: 1000px;
+    perspective-origin: center;
+}
+.half-part{
+    position: absolute;
+    width: 100%;
+    height: 50%;
+}
+#left-half{
+    /* background-color: rgba(54, 236, 63,0.1); */
+}
+#right-half{
+    left: 0%;
+    top: 50%;
+    background-color: rgba(54, 236, 63,0.1);
+}
+body{
+    background: none;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 }
