@@ -1,130 +1,117 @@
 *{
-    margin-top: 10px;
+    margin-top: 0px;
     padding: 0;
 }
 body{
-    background-color: black;
+    background: url(wp2727708-black-and-green-wallpaper.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-#head1{
-    position: absolute;
-    left: 47vw;
-    top: 3vh;
+.cube .front{
+    transform: translateZ(100px);
 }
-#head2{
-    position: absolute;
-    left: 45vw;
-    top: 8vh;
+.cube .bottom{
+    transform: 
+    rotateX(-90deg)
+    translateZ(100px);
 }
-.head{
-    display: flex;
-    font-size: 35px;
-    font-weight: 700;
-    color: #8E806A;
-    justify-content: center;
+.cube .top{
+    transform: 
+    rotateX(90deg)
+    translateZ(100px);
 }
-.common{
-    font-weight: 600;
-    font-size: 30px;
-    color: #8E806A;
-    margin-left: 5px;
+.cube .left{
+    transform: rotateY(-90deg)
+    translateZ(100px);
 }
-.box_common{
-    display: grid;
-    justify-content: center;
-    align-items: center;
+.cube .right{
+    transform: rotateY(90deg)
+    translateZ(100px);
+}
+.cube .back{
+    transform: translateZ(-100px)
+    rotateX(-180deg);
+}
+.cube div{
+    background: hsla(0, 4%, 23%, 0.8);
     width: 200px;
     height: 200px;
-    border: 2px solid #DCD4C0;
-    font-size: 40px;
-}
-.box_common:hover{
-    transition: all 1s ease;
-    background-color: #8E806A;
-}
-.roll:hover{
-    transition: all 0.1s ease;
-    box-shadow: #DCD4C0 1px -1px 10px 10px;
-}
-#container{
-    display: flex;
-    color: #8E806A;
-}
-#cont1{
-    display: grid;
-    justify-content: center;
     position: absolute;
-    left: 300px;
+    border: 1px solid black;
+}
+.container{
+    position: relative;
+    margin: 100px auto 40px 300px;
+    width: 200px;
     top: 100px;
+    height: 200px;
+    perspective: 1000px;
+    perspective-origin: center;
 }
 
-#cont2{
-    display: grid;
-    justify-content: center;
-    position: absolute;
-    right: 300px;
-    top: 100px;
-}
-.common{
-    margin-left: 40px;
-    margin-bottom: 50px;
-}
-#roll1{
-    background-color: #146356;
-}
-#roll2{
-    background-color: #A3423C;
-}
-.roll{
-    margin-top: 50px;
-    margin-left: 27px;
-    padding-top: 10px;
-    padding-left: 55px;
-    font-size: 20px;
-    font-weight: 800;
-    width: 90px;
-    height: 30px;
-    border: 2px solid #DCD4C0;
-    border-radius: 20px;
-    cursor: pointer;
-    text-shadow: -1px 1px 0 #6C4A4A,
-                          1px 1px 0 #6C4A4A,
-                         1px -1px 0 #6C4A4A,
-                        -1px -1px 0 #6C4A4A;
-}
-.on{
-    animation: rotate 2s ease 1;
-
-}
-@keyframes rotate{
-    100% { transform: rotate(1440deg);}
-}
-#modal-div{
-    display: none;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: -10%;
-    z-index: 1;
-    font-size: 50px;
-    font-weight: 700;
-    color: #8E806A;
-    /* filter: blur(10px); */
-    background-color: rgba(0, 0, 0, 0.8);
+.cube{
     width: 100%;
     height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform 3s;
 }
-#play_again{
-    display: none;
-    justify-content: center;
-    font-size: 20px;
-    color: #8E806A;
+
+.dot {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    background: rgba(54, 236, 63,0.8);
 }
-#rule{
-    display: inline;
-    float: left;
-    font-size: 20px;
-    margin-top: -12px;
-    font-size: 20px;
-    color: #8E806A;
-    cursor: pointer;
+
+.front .dot1{top: 85px; left: 85px;}
+.back .dot1{top: 45px; left: 45px;}
+.back .dot2{top: 45px; left: 85px;}
+.back .dot3{top: 45px; left: 125px;}
+.back .dot4{top: 125px; left: 45px;}
+.back .dot5{top: 125px; left: 85px;}
+.back .dot6{top: 125px; left: 125px;}
+.left .dot1{top: 40px; left: 50px;}
+.left .dot2{top: 130px; left: 50px;}
+.left .dot3{top: 40px; left: 120px;}
+.left .dot4{top: 130px; left: 120px;}
+.right .dot1{top: 40px; left: 50px;}
+.right .dot2{top: 80px; left: 90px;}
+.right .dot3{top: 120px; left: 130px;}
+.top .dot1{top: 40px; left: 50px;}
+.top .dot2{top: 120px; left: 130px;}
+.bottom .dot1{top: 45px; left: 45px;}
+.bottom .dot2{top: 45px; left: 125px;}
+.bottom .dot3{top: 85px; left: 85px;}
+.bottom .dot4{top: 125px; left: 45px;}
+.bottom .dot5{top: 125px; left: 125px;}
+
+#container1{
+    top: 50px;
+    left: -50px;
+}
+#container2{
+    top: -250px;
+    left: 600px;
+}
+.roll_dice{
+    text-decoration: n;
+    position: absolute;
+    top: 300px;
+    left: 50px;
+    width: 100px;
+    height: 30px;
+    background-color: rgba(54, 236, 63,0.5);
+    border:1px solid hsla(0, 4%, 23%, 0.8);
+}
+
+#main-container{
+    position: absolute;
+    width: 80vw;
+    height: 80vh;
+    top: 10%;
+    left: 10%;
+    background-color: hsla(0, 4%, 23%, 0.8);
 }

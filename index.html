@@ -8,26 +8,83 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="modal-div"></div>
-    <div id="rule">Rules</div>
-    <div id="head1" class="head">Dice Game! </div>
-    <div id="head2" class="head">First to 20 wins</div>
-    <div id="play_again">Play Again!!</div>
-    <div id="container">
-        <div id="cont1">
-            <div class="common">
-                Player 1
+    <div id="main-container">
+    <section id="container1" class="container">
+        <div id="cube1" class="cube">
+            <div class="front">
+                <span class="dot dot1"></span>
             </div>
-            <div id="box1" class="box_common"></div>
-            <div id="roll1" class="roll">Roll</div>
-        </div>
-        <div id="cont2">
-            <div class="common">
-                Player 2
+            <div class="top">
+                <span class="dot dot1"></span>
+                <span class="dot dot2"></span>
             </div>
-            <div id="box2" class="box_common"></div>
-            <div id="roll2" class="roll">Roll</div>
+            <div class="back">
+                <span class="dot dot1"></span>
+                <span class="dot dot2"></span>
+                <span class="dot dot3"></span>
+                <span class="dot dot4"></span>
+                <span class="dot dot5"></span>
+                <span class="dot dot6"></span>
+            </div>
+            <div class="left">
+                <span class="dot dot1"></span>
+                <span class="dot dot2"></span>
+                <span class="dot dot3"></span>
+                <span class="dot dot4"></span>
+            </div>
+            <div class="right">
+                <span class="dot dot1"></span>
+                <span class="dot dot2"></span>
+                <span class="dot dot3"></span> 
+            </div>
+            <div class="bottom">
+                <span class="dot dot1"></span>
+                <span class="dot dot2"></span>
+                <span class="dot dot3"></span>
+                <span class="dot dot4"></span>
+                <span class="dot dot5"></span>
+            </div>
         </div>
+        <button class="roll_dice" value="cube1" onclick="roll_the_dice(this.value)">Roll</button>
+    </section>
+    <section id="container2" class="container">
+        <div id="cube2" class="cube">
+            <div class="front">
+                <span class="dot dot1"></span>
+            </div>
+            <div class="top">
+                <span class="dot dot1"></span>
+                <span class="dot dot2"></span>
+            </div>
+            <div class="back">
+                <span class="dot dot1"></span>
+                <span class="dot dot2"></span>
+                <span class="dot dot3"></span>
+                <span class="dot dot4"></span>
+                <span class="dot dot5"></span>
+                <span class="dot dot6"></span>
+            </div>
+            <div class="left">
+                <span class="dot dot1"></span>
+                <span class="dot dot2"></span>
+                <span class="dot dot3"></span>
+                <span class="dot dot4"></span>
+            </div>
+            <div class="right">
+                <span class="dot dot1"></span>
+                <span class="dot dot2"></span>
+                <span class="dot dot3"></span> 
+            </div>
+            <div class="bottom">
+                <span class="dot dot1"></span>
+                <span class="dot dot2"></span>
+                <span class="dot dot3"></span>
+                <span class="dot dot4"></span>
+                <span class="dot dot5"></span>
+            </div>
+        </div>
+        <button class="roll_dice" value="cube2" onclick="roll_the_dice(this.value)">Roll</button>
+    </section>
     </div>
     <script src="jquery-3.6.0.js"></script>
     <script src="script.js"></script>
