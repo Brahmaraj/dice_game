@@ -1,6 +1,7 @@
 let first_player = true;
 let second_player = false;
-
+let horizontal_dice = [1,3,6,4]
+let vertical_dice = [1,2,6,5]
 
 function roll_the_dice1(dice){
     var x = getRandom();
