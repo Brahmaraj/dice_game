@@ -16,6 +16,8 @@ function roll_the_dice11(dice){
         let dice_number = mathRandom();
         document.getElementById(dice).style.transform = `rotateX(${horizontal_number[dice_number][0]+(mathRandom()*360)}deg) rotateY(${horizontal_number[dice_number][1]+(mathRandom()*360)}deg)`;
         setTimeout(() => {
+        document.getElementById("score1").textContent = Number(document.getElementById("score1").textContent) + dice_number;
+        if(Number(document.getElementById("score1").textContent)<25){
         $([document.documentElement, document.body]).animate({
                 scrollTop: $(".scorecard2").offset().top
             }, 1000);
@@ -23,9 +25,17 @@ function roll_the_dice11(dice){
         document.getElementById("right-half").style.backgroundColor = 'hsla(0, 4%, 23%, 0.8)'; 
         first_player = false;
         second_player = true;
-        document.getElementById("score1").textContent = Number(document.getElementById("score1").textContent) + dice_number;
+        }
+        else {
+            document.getElementById("win_overlay").style.display = "grid";
+            document.getElementById("win_overlay").innerText = "Player 1 Wins!!";
+            setTimeout(() => {
+                location.reload();
+            }, 2500); 
+        }
         }, 3000);
     }
+
 }
 
 function roll_the_dice22(dice){
@@ -37,6 +47,8 @@ function roll_the_dice22(dice){
          let dice_number = mathRandom();
         document.getElementById(dice).style.transform = `rotateX(${horizontal_number[dice_number][0]+(mathRandom()*360)}deg) rotateY(${horizontal_number[dice_number][1]+(mathRandom()*360)}deg)`;
         setTimeout(() => {  
+        document.getElementById("score2").textContent = Number(document.getElementById("score2").textContent) + dice_number;
+        if(Number(document.getElementById("score2").textContent)<25){
         $([document.documentElement, document.body]).animate({
                 scrollTop: $(".scorecard1").offset().top
             }, 1000);
@@ -44,7 +56,14 @@ function roll_the_dice22(dice){
         document.getElementById("right-half").style.backgroundColor = 'rgba(54, 236, 63,0.1)'; 
         first_player = true;
         second_player = false;
-        document.getElementById("score2").textContent = Number(document.getElementById("score2").textContent) + dice_number;
+        }
+        else {
+            document.getElementById("win_overlay").style.display = "grid";
+            document.getElementById("win_overlay").innerText = "Player 2 Wins!!";
+            setTimeout(() => {
+                location.reload();
+            }, 2500); 
+        }
         }, 3000);   
     }
 }

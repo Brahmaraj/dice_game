@@ -1,12 +1,13 @@
 *{
     margin-top: 0px;
-    padding: 0;
+    padding: 0px;
 }
 body{
     background: url(wp2727708-black-and-green-wallpaper.jpg);
     filter: opacity(100px);
     background-repeat: no-repeat;
     background-size: cover;
+    margin: 0px;
 }
 .cube .front{
     transform: translateZ(100px);
@@ -158,6 +159,20 @@ body{
     font-weight: 700;
     font-size: 30px;
     text-align: center;
+}
+
+#win_overlay{
+    display: none;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(66, 78, 67, 0.7);
+    text-align: center;
+    align-items: center;
+    color: #fff;
+    font-size: 50px;
 }
 
 @media only screen and (max-width: 1000px) {
