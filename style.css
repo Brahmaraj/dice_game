@@ -146,13 +146,27 @@ body{
     color: rgba(54, 236, 63);
 }
 
+.score{
+    display: grid;
+    align-items: center;
+    position: absolute;
+    top: 230px;
+    width: 200px;
+    height: 50px;
+    border: 1px solid black;
+    color: white;
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
+}
+
 @media only screen and (max-width: 1000px) {
   #container1{
     position: relative;
 }
 #container2{
     position: relative;
-    top: 25%;
+    top: 28%;
     left: -5%;
 }
 #main-container{
