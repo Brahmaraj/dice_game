@@ -50,7 +50,7 @@ function roll_the_dice22(dice){
         document.getElementById("score2").textContent = Number(document.getElementById("score2").textContent) + dice_number;
         if(Number(document.getElementById("score2").textContent)<25){
         $([document.documentElement, document.body]).animate({
-                scrollTop: $(".scorecard2").offset().top
+                scrollTop: $(".scorecard1").offset().top
             }, 1000);
         document.getElementById("left-half").style.backgroundColor = 'hsla(0, 4%, 23%, 0.8)';
         document.getElementById("right-half").style.backgroundColor = 'rgba(54, 236, 63,0.1)'; 
@@ -58,6 +58,9 @@ function roll_the_dice22(dice){
         second_player = false;
         }
         else {
+            $([document.documentElement, document.body]).animate({
+                scrollTop: $(".scorecard1").offset().top
+            }, 1000);
             document.getElementById("win_overlay").style.display = "grid";
             document.getElementById("win_overlay").innerText = "Player 2 Wins!!";
             setTimeout(() => {
