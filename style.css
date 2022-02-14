@@ -175,6 +175,18 @@ body{
     font-size: 50px;
 }
 
+#rules{
+    position: absolute;
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+    text-shadow: #fff 0px 0px 5px;
+}
+
+#rules-content{
+    display: none;
+}
+
 @media only screen and (max-width: 1000px) {
   #container1{
     position: relative;

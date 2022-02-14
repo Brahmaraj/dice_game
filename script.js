@@ -99,3 +99,10 @@ function throttle(func,limit){
         }
     }
 }
+
+$("#rules").mouseenter(function(){
+    $("#rules-content").css("display","block");
+});
+$("#rules").mouseleave(function(){
+    $("#rules-content").css("display","none");
+});
